@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "robot_expe")
+set(robot_expe_MAINTAINER "fabio <pardo.fab@gmail.com>")
+set(robot_expe_DEPRECATED "")
+set(robot_expe_VERSION "0.0.0")
+set(robot_expe_BUILD_DEPENDS "message_generation" "roscpp" "rospy" "std_msgs")
+set(robot_expe_RUN_DEPENDS "message_runtime" "roscpp" "rospy" "std_msgs")
+set(robot_expe_BUILDTOOL_DEPENDS "catkin")

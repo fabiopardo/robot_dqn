@@ -1,0 +1,47 @@
+[program started on Thu Aug 13 19:36:37 2015] 
+[command line arguments] 
+eps_end 0.1 
+ncols 1 
+replay_memory 500000 
+hist_len 1 
+camera_width 320 
+learn_start_after_buffer 1 
+gpu -1 
+eval_freq 2500 
+preproc_net "net_preproc_robot_expe" 
+framework robot_expe 
+agent NeuralQLearner 
+update_freq 4 
+save_versions 0 
+initial_priority false 
+agent_type DQN3_0_1 
+seed 1 
+prog_freq 1000 
+min_reward -1 
+valid_size 500 
+discount 0.99 
+ep 1 
+eval_steps 1250 
+pool_frms_type "max" 
+max_reward 1 
+num_threads 4 
+images_width 64 
+minibatch_size 32 
+agent_name DQN_EXPE 
+n_replay 1 
+buffer_n_minibatch 2 
+state_dim 7056 
+camera_height 240 
+steps 50000000 
+eps_endt 500000 
+lr 0.00025 
+clip_delta 1 
+images_height 48 
+transitions_file false 
+netfile "convnet_atari3" 
+rescale_r 1 
+expe_mode train 
+save_freq 2500 
+pool_frms_size 2 
+[----------------------] 
+TRAIN MODE 

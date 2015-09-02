@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf8"?>
+<world name="myworld5">
+
+  <gravity x="0.0" y="-980.7" z="0.0"/>
+
+  <!-- Set a humanoid robot agent Robot-nii -->
+  <instanciate class="Robot-nii.xml">
+
+    <!-- Set name of a humanoid robot agent -->
+    <set-attr-value name="name" value="robot_000"/>
+
+    <!-- Set language type as C++ for the controller -->
+    <set-attr-value name="language" value="c++"/>
+
+    <!-- Set a file name of the controller -->
+    <set-attr-value name="implementation" value="./captureView.so"/>
+
+    <!-- put the flag of dynamics to false -->
+    <set-attr-value name="dynamics" value="false"/>
+
+    <!-- Set the initial position of agent (x,y,z) -->
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="y" value="54.0"/>
+    <set-attr-value name="z" value="-40.0"/>
+
+    <!-- Set the Camera ID, name of link on which the camera is attached, direction and position -->
+    <camera id="1"
+            link="HEAD_LINK"
+            direction="0.1 0 1"
+            position="-2.0 0.0 7.0"/>
+    <camera id="2"
+            link="HEAD_LINK"
+            direction="-0.1 0 1"
+            position="2.0 0.0 7.0"/>
+  </instanciate>
+
+  <!-- Construction of a living room -->
+  <instanciate class="seTV.xml">
+    <set-attr-value name="name" value="TV_0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="x" value="-20.0"/>
+    <set-attr-value name="y" value="87.5"/>
+    <set-attr-value name="z" value="-250.0"/>
+    <set-attr-value name="visStateAttrName" value="switch"/>
+    <set-attr-value name="switch" value="on"/>
+  </instanciate>
+
+  <instanciate class="seDoll_Bear.xml">
+    <set-attr-value name="name" value="kuma_0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="y" value="9.9"/>
+    <set-attr-value name="z" value="0.0"/>
+  </instanciate>
+
+  <instanciate class="seToy_D.xml">
+    <set-attr-value name="name" value="penguin_0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="x" value="50.0"/>
+    <set-attr-value name="y" value="6.15"/>
+    <set-attr-value name="z" value="-40.0"/>
+  </instanciate>
+
+  <instanciate class="seSofa_2seater.xml">
+    <set-attr-value name="name" value="sofa_0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="x" value="-200.0"/>
+    <set-attr-value name="y" value="31.85"/>
+    <set-attr-value name="z" value="-100.0"/>
+    <set-attr-value name="qw" value="0.707"/>
+    <set-attr-value name="qx" value="0.0"/>
+    <set-attr-value name="qy" value="0.707"/>
+    <set-attr-value name="qz" value="0.0"/>
+  </instanciate>
+
+  <instanciate class="seTVbass_B.xml">
+    <set-attr-value name="name" value="TVdai_0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="x" value="-20.0"/>
+    <set-attr-value name="y" value="25.1"/>
+    <set-attr-value name="z" value="-250.0"/>
+  </instanciate>
+
+  <instanciate class="sePlant_B.xml">
+    <set-attr-value name="name" value="ki_0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="x" value="100.0"/>
+    <set-attr-value name="y" value="56.5"/>
+    <set-attr-value name="z" value="-250.0"/>
+  </instanciate>
+
+  <instanciate class="seSidetable_B.xml">
+    <set-attr-value name="name" value="sidetable_0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="x" value="-100.0"/>
+    <set-attr-value name="y" value="16.0"/>
+    <set-attr-value name="z" value="-100.0"/>
+    <set-attr-value name="qw" value="0.707"/>
+    <set-attr-value name="qx" value="0.0"/>
+    <set-attr-value name="qy" value="0.707"/>
+    <set-attr-value name="qz" value="0.0"/>
+  </instanciate>
+  <instanciate class="seApple.xml">
+    <set-attr-value name="name" value="apple_0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="x" value="-50.0"/>
+    <set-attr-value name="y" value="3.875"/>
+    <set-attr-value name="z" value="30.0"/>
+  </instanciate>
+
+  <instanciate class="seOrange.xml">
+    <set-attr-value name="name" value="orange_0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="x" value="70.0"/>
+    <set-attr-value name="y" value="2.215"/>
+    <set-attr-value name="z" value="-30.0"/>
+  </instanciate>
+
+</world>
+

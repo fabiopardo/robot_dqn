@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<define-class inherit="Agent.xml" name="walls">
+  <body filename="dummy-body.xml"/>
+
+  <x3d>
+    <filename>walls.x3d</filename>
+    <set-attr-value name="x" value="-1000.0"/>
+    <set-attr-value name="y" value="50.0"/>
+    <set-attr-value name="z" value="0.0"/>
+  </x3d>
+</define-class>

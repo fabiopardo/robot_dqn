@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<define-class inherit="Entity.xml" name="box">
+  <body filename="dummy-body.xml"/>
+    <joint name="BODY">
+      <type>free</type>
+      <translation>0 0 0</translation>
+      <children>
+        <segment name="body">
+          <children>
+            <transform>
+              <translation>0 1.5 0</translation>
+              <rotation>0 0 1 0</rotation>
+              <shape>
+                <geometry type="box">
+                  <size>1.0 1.0 0.8</size>
+                </geometry>
+              </shape>
+            </transform>
+          </children>
+        </segment> <!-- body -->
+      </children>
+    </joint>
+  </body>
+</define-class>
+

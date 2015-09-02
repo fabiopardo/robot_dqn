@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "robot_world")
+set(robot_world_MAINTAINER "fabio <pardo.fab@gmail.com>")
+set(robot_world_DEPRECATED "")
+set(robot_world_VERSION "0.0.0")
+set(robot_world_BUILD_DEPENDS )
+set(robot_world_RUN_DEPENDS )
+set(robot_world_BUILDTOOL_DEPENDS "catkin")

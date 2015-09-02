@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<world name="world">
+  <gravity x="0.0" y="-980.7" z="0.0"/>
+
+  robot
+
+  <instanciate class="simple_robot.xml" type="Robot">
+    <set-attr-value name="name" value="robot"/>
+    <set-attr-value name="language" value="c++"/>
+    
+    <set-attr-value name="implementation"
+                    value="/home/fabio/catkin_ws/devel/lib/librobot_expe/robot_controller.so"/>
+    
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+
+    <camera id="1"
+            link="LINK_CAMERA"
+            position="0.0 8.0 -2.0"
+            fov="60"  
+            aspectRatio="1.5"/>
+
+  <camera id="2"
+            link="LINK_CAMERA"
+            position="0.0 15.0 -50.0"
+            fov="60"  
+            aspectRatio="1.5"/>
+
+  </instanciate>
+
+  walls
+
+  <instanciate class="wall_x.xml">
+    <set-attr-value name="name" value="wall1"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="z" value="1000.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="wall_x.xml">
+    <set-attr-value name="name" value="wall2"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="z" value="-1000.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="wall_z.xml">
+    <set-attr-value name="name" value="wall3"/>
+    <set-attr-value name="x" value="1000.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="wall_z.xml">
+    <set-attr-value name="name" value="wall4"/>
+    <set-attr-value name="x" value="-1000.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  floor
+
+  <instanciate class="floor.xml">
+    <set-attr-value name="name" value="floor"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  targets
+
+  <instanciate class="target.xml">
+    <set-attr-value name="name" value="target"/>
+    <!--
+    <set-attr-value name="language" value="c++"/>
+    <set-attr-value name="implementation"
+                    value="./target_controller.so"/>
+    -->
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="y" value="200.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <!--
+  <instanciate class="target.xml">
+    <set-attr-value name="name" value="target2"/>
+    <set-attr-value name="language" value="c++"/>
+    <set-attr-value name="implementation"
+                    value="./target_controller.so"/>
+    <set-attr-value name="x" value="300.0"/>
+    <set-attr-value name="z" value="700.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="target.xml">
+    <set-attr-value name="name" value="target3"/>
+    <set-attr-value name="language" value="c++"/>
+    <set-attr-value name="implementation"
+                    value="./target_controller.so"/>
+    <set-attr-value name="x" value="700.0"/>
+    <set-attr-value name="z" value="-700.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="target.xml">
+    <set-attr-value name="name" value="target4"/>
+    <set-attr-value name="language" value="c++"/>
+    <set-attr-value name="implementation"
+                    value="./target_controller.so"/>
+    <set-attr-value name="x" value="-700.0"/>
+    <set-attr-value name="z" value="300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="target.xml">
+    <set-attr-value name="name" value="target5"/>
+    <set-attr-value name="language" value="c++"/>
+    <set-attr-value name="implementation"
+                    value="./target_controller.so"/>
+    <set-attr-value name="x" value="-300.0"/>
+    <set-attr-value name="z" value="-300.71"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="target.xml">
+    <set-attr-value name="name" value="target6"/>
+    <set-attr-value name="language" value="c++"/>
+    <set-attr-value name="implementation"
+                    value="./target_controller.so"/>
+    <set-attr-value name="x" value="-500.0"/>
+    <set-attr-value name="z" value="500.71"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+  -->
+
+  large blocks
+
+  <instanciate class="block_large.xml">
+    <set-attr-value name="name" value="block_large1"/>
+    <set-attr-value name="x" value="800.0"/>
+    <set-attr-value name="z" value="-400.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <!--
+  <instanciate class="block_large.xml">
+    <set-attr-value name="name" value="block_large2"/>
+    <set-attr-value name="x" value="600.0"/>
+    <set-attr-value name="z" value="-600.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+  -->
+
+  <instanciate class="block_large.xml">
+    <set-attr-value name="name" value="block_large3"/>
+    <set-attr-value name="x" value="-200.0"/>
+    <set-attr-value name="z" value="600.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="block_large.xml">
+    <set-attr-value name="name" value="block_large4"/>
+    <set-attr-value name="x" value="500.0"/>
+    <set-attr-value name="z" value="100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="block_large.xml">
+    <set-attr-value name="name" value="block_large5"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="z" value="-400.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="block_large.xml">
+    <set-attr-value name="name" value="block_large6"/>
+    <set-attr-value name="x" value="-200.0"/>
+    <set-attr-value name="z" value="-800.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="block_large.xml">
+    <set-attr-value name="name" value="block_large7"/>
+    <set-attr-value name="x" value="400.0"/>
+    <set-attr-value name="z" value="800.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="block_large.xml">
+    <set-attr-value name="name" value="block_large8"/>
+    <set-attr-value name="x" value="-600.0"/>
+    <set-attr-value name="z" value="-200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="block_large.xml">
+    <set-attr-value name="name" value="block_large9"/>
+    <set-attr-value name="x" value="-700.0"/>
+    <set-attr-value name="z" value="700.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  small blocks
+
+  <instanciate class="block_small.xml">
+    <set-attr-value name="name" value="block_small1"/>
+    <set-attr-value name="x" value="700.0"/>
+    <set-attr-value name="z" value="500.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="block_small.xml">
+    <set-attr-value name="name" value="block_small3"/>
+    <set-attr-value name="x" value="400.0"/>
+    <set-attr-value name="z" value="-600.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="block_small.xml">
+    <set-attr-value name="name" value="block_small4"/>
+    <set-attr-value name="x" value="100.0"/>
+    <set-attr-value name="z" value="300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <!--
+  <instanciate class="block_small.xml">
+    <set-attr-value name="name" value="block_small5"/>
+    <set-attr-value name="x" value="-100.0"/>
+    <set-attr-value name="z" value="100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+  -->
+
+  <instanciate class="block_small.xml">
+    <set-attr-value name="name" value="block_small7"/>
+    <set-attr-value name="x" value="-500.0"/>
+    <set-attr-value name="z" value="100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="block_small.xml">
+    <set-attr-value name="name" value="block_small8"/>
+    <set-attr-value name="x" value="-700.0"/>
+    <set-attr-value name="z" value="-700.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+</world>
+

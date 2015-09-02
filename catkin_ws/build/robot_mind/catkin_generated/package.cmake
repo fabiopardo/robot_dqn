@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "robot_mind")
+set(robot_mind_MAINTAINER "fabio <pardo.fab@gmail.com>")
+set(robot_mind_DEPRECATED "")
+set(robot_mind_VERSION "0.0.0")
+set(robot_mind_BUILD_DEPENDS "message_generation")
+set(robot_mind_RUN_DEPENDS "message_runtime")
+set(robot_mind_BUILDTOOL_DEPENDS "catkin")

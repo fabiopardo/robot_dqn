@@ -1,0 +1,8 @@
+prefix=/home/fabio/catkin_ws/devel
+
+Name: robot_expe
+Description: Description of robot_expe
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/fabio/catkin_ws/devel/lib 
+Requires: message_runtime

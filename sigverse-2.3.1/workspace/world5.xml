@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="utf-8"?>
+<world name="world">
+  <gravity x="0.0" y="-980.7" z="0.0"/>
+
+  robot
+
+  <instanciate class="simple_robot.xml" type="Robot">
+    <set-attr-value name="name" value="robot"/>
+    <set-attr-value name="language" value="c++"/>
+    
+    <set-attr-value name="implementation"
+                    value="/home/fabio/catkin_ws/devel/lib/librobot_expe/robot_controller.so"/>
+    
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+
+    <camera id="1"
+            link="LINK_CAMERA"
+            position="0.0 9.0 -2.0"
+            fov="60"  
+            aspectRatio="1.5"/>
+
+  <camera id="2"
+            link="LINK_CAMERA"
+            position="0.0 15.0 -50.0"
+            fov="60"  
+            aspectRatio="1.5"/>
+
+  </instanciate>
+
+  walls
+
+  <instanciate class="wall_x.xml">
+    <set-attr-value name="name" value="wall1"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="z" value="150.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="wall_x.xml">
+    <set-attr-value name="name" value="wall2"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="z" value="-150.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="wall_z.xml">
+    <set-attr-value name="name" value="wall3"/>
+    <set-attr-value name="x" value="150.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="wall_z.xml">
+    <set-attr-value name="name" value="wall4"/>
+    <set-attr-value name="x" value="-150.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  floor
+
+  <instanciate class="floor.xml">
+    <set-attr-value name="name" value="floor"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  targets
+
+  <instanciate class="target.xml">
+    <set-attr-value name="name" value="target"/>
+    <!--
+    <set-attr-value name="language" value="c++"/>
+    <set-attr-value name="implementation"
+                    value="./target_controller.so"/>
+    -->
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="y" value="200.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  large blocks
+
+  <!--
+  <instanciate class="block_large.xml">
+    <set-attr-value name="name" value="block_large1"/>
+    <set-attr-value name="x" value="-200.0"/>
+    <set-attr-value name="z" value="-200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="block_large.xml">
+    <set-attr-value name="name" value="block_large2"/>
+    <set-attr-value name="x" value="300.0"/>
+    <set-attr-value name="z" value="-100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="block_large.xml">
+    <set-attr-value name="name" value="block_large3"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="z" value="300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  small blocks
+
+  <instanciate class="block_small.xml">
+    <set-attr-value name="name" value="block_small1"/>
+    <set-attr-value name="x" value="-300.0"/>
+    <set-attr-value name="z" value="100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="block_small.xml">
+    <set-attr-value name="name" value="block_small2"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="z" value="-300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="block_small.xml">
+    <set-attr-value name="name" value="block_small3"/>
+    <set-attr-value name="x" value="200.0"/>
+    <set-attr-value name="z" value="200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+  -->
+
+  fake targets
+
+  <!--
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0101"/>
+    <set-attr-value name="x" value="-400.0"/>
+    <set-attr-value name="z" value="-400.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0102"/>
+    <set-attr-value name="x" value="-300.0"/>
+    <set-attr-value name="z" value="-400.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0103"/>
+    <set-attr-value name="x" value="-200.0"/>
+    <set-attr-value name="z" value="-400.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0104"/>
+    <set-attr-value name="x" value="-100.0"/>
+    <set-attr-value name="z" value="-400.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0105"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="z" value="-400.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0106"/>
+    <set-attr-value name="x" value="100.0"/>
+    <set-attr-value name="z" value="-400.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0107"/>
+    <set-attr-value name="x" value="200.0"/>
+    <set-attr-value name="z" value="-400.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0108"/>
+    <set-attr-value name="x" value="300.0"/>
+    <set-attr-value name="z" value="-400.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target01009"/>
+    <set-attr-value name="x" value="400.0"/>
+    <set-attr-value name="z" value="-400.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0201"/>
+    <set-attr-value name="x" value="-400.0"/>
+    <set-attr-value name="z" value="-300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0202"/>
+    <set-attr-value name="x" value="-300.0"/>
+    <set-attr-value name="z" value="-300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0203"/>
+    <set-attr-value name="x" value="-200.0"/>
+    <set-attr-value name="z" value="-300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0204"/>
+    <set-attr-value name="x" value="-100.0"/>
+    <set-attr-value name="z" value="-300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0205"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="z" value="-300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0206"/>
+    <set-attr-value name="x" value="100.0"/>
+    <set-attr-value name="z" value="-300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0207"/>
+    <set-attr-value name="x" value="200.0"/>
+    <set-attr-value name="z" value="-300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0208"/>
+    <set-attr-value name="x" value="300.0"/>
+    <set-attr-value name="z" value="-300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target02009"/>
+    <set-attr-value name="x" value="400.0"/>
+    <set-attr-value name="z" value="-300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0301"/>
+    <set-attr-value name="x" value="-400.0"/>
+    <set-attr-value name="z" value="-200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0302"/>
+    <set-attr-value name="x" value="-300.0"/>
+    <set-attr-value name="z" value="-200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0303"/>
+    <set-attr-value name="x" value="-200.0"/>
+    <set-attr-value name="z" value="-200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0304"/>
+    <set-attr-value name="x" value="-100.0"/>
+    <set-attr-value name="z" value="-200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0305"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="z" value="-200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0306"/>
+    <set-attr-value name="x" value="100.0"/>
+    <set-attr-value name="z" value="-200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0307"/>
+    <set-attr-value name="x" value="200.0"/>
+    <set-attr-value name="z" value="-200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0308"/>
+    <set-attr-value name="x" value="300.0"/>
+    <set-attr-value name="z" value="-200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target03009"/>
+    <set-attr-value name="x" value="400.0"/>
+    <set-attr-value name="z" value="-200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0401"/>
+    <set-attr-value name="x" value="-400.0"/>
+    <set-attr-value name="z" value="-100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0402"/>
+    <set-attr-value name="x" value="-300.0"/>
+    <set-attr-value name="z" value="-100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0403"/>
+    <set-attr-value name="x" value="-200.0"/>
+    <set-attr-value name="z" value="-100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0404"/>
+    <set-attr-value name="x" value="-100.0"/>
+    <set-attr-value name="z" value="-100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0405"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="z" value="-100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0406"/>
+    <set-attr-value name="x" value="100.0"/>
+    <set-attr-value name="z" value="-100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0407"/>
+    <set-attr-value name="x" value="200.0"/>
+    <set-attr-value name="z" value="-100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0408"/>
+    <set-attr-value name="x" value="300.0"/>
+    <set-attr-value name="z" value="-100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target04009"/>
+    <set-attr-value name="x" value="400.0"/>
+    <set-attr-value name="z" value="-100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0501"/>
+    <set-attr-value name="x" value="-400.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0502"/>
+    <set-attr-value name="x" value="-300.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0503"/>
+    <set-attr-value name="x" value="-200.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0504"/>
+    <set-attr-value name="x" value="-100.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0505"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0506"/>
+    <set-attr-value name="x" value="100.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0507"/>
+    <set-attr-value name="x" value="200.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target0508"/>
+    <set-attr-value name="x" value="300.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target05009"/>
+    <set-attr-value name="x" value="400.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1101"/>
+    <set-attr-value name="x" value="-400.0"/>
+    <set-attr-value name="z" value="400.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1102"/>
+    <set-attr-value name="x" value="-300.0"/>
+    <set-attr-value name="z" value="400.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1103"/>
+    <set-attr-value name="x" value="-200.0"/>
+    <set-attr-value name="z" value="400.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1104"/>
+    <set-attr-value name="x" value="-100.0"/>
+    <set-attr-value name="z" value="400.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1105"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="z" value="400.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1106"/>
+    <set-attr-value name="x" value="100.0"/>
+    <set-attr-value name="z" value="400.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1107"/>
+    <set-attr-value name="x" value="200.0"/>
+    <set-attr-value name="z" value="400.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1108"/>
+    <set-attr-value name="x" value="300.0"/>
+    <set-attr-value name="z" value="400.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target11009"/>
+    <set-attr-value name="x" value="400.0"/>
+    <set-attr-value name="z" value="400.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1201"/>
+    <set-attr-value name="x" value="-400.0"/>
+    <set-attr-value name="z" value="300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1202"/>
+    <set-attr-value name="x" value="-300.0"/>
+    <set-attr-value name="z" value="300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1203"/>
+    <set-attr-value name="x" value="-200.0"/>
+    <set-attr-value name="z" value="300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1204"/>
+    <set-attr-value name="x" value="-100.0"/>
+    <set-attr-value name="z" value="300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1205"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="z" value="300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1206"/>
+    <set-attr-value name="x" value="100.0"/>
+    <set-attr-value name="z" value="300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1207"/>
+    <set-attr-value name="x" value="200.0"/>
+    <set-attr-value name="z" value="300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1208"/>
+    <set-attr-value name="x" value="300.0"/>
+    <set-attr-value name="z" value="300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target12009"/>
+    <set-attr-value name="x" value="400.0"/>
+    <set-attr-value name="z" value="300.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1301"/>
+    <set-attr-value name="x" value="-400.0"/>
+    <set-attr-value name="z" value="200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1302"/>
+    <set-attr-value name="x" value="-300.0"/>
+    <set-attr-value name="z" value="200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1303"/>
+    <set-attr-value name="x" value="-200.0"/>
+    <set-attr-value name="z" value="200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1304"/>
+    <set-attr-value name="x" value="-100.0"/>
+    <set-attr-value name="z" value="200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1305"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="z" value="200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1306"/>
+    <set-attr-value name="x" value="100.0"/>
+    <set-attr-value name="z" value="200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1307"/>
+    <set-attr-value name="x" value="200.0"/>
+    <set-attr-value name="z" value="200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1308"/>
+    <set-attr-value name="x" value="300.0"/>
+    <set-attr-value name="z" value="200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target13009"/>
+    <set-attr-value name="x" value="400.0"/>
+    <set-attr-value name="z" value="200.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1401"/>
+    <set-attr-value name="x" value="-400.0"/>
+    <set-attr-value name="z" value="100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1402"/>
+    <set-attr-value name="x" value="-300.0"/>
+    <set-attr-value name="z" value="100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1403"/>
+    <set-attr-value name="x" value="-200.0"/>
+    <set-attr-value name="z" value="100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1404"/>
+    <set-attr-value name="x" value="-100.0"/>
+    <set-attr-value name="z" value="100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1405"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="z" value="100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1406"/>
+    <set-attr-value name="x" value="100.0"/>
+    <set-attr-value name="z" value="100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1407"/>
+    <set-attr-value name="x" value="200.0"/>
+    <set-attr-value name="z" value="100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target1408"/>
+    <set-attr-value name="x" value="300.0"/>
+    <set-attr-value name="z" value="100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  <instanciate class="fake_target.xml">
+    <set-attr-value name="name" value="fake_target14009"/>
+    <set-attr-value name="x" value="400.0"/>
+    <set-attr-value name="z" value="100.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+  -->
+
+</world>
+

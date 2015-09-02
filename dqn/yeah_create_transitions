@@ -1,0 +1,47 @@
+#!/bin/bash
+
+FRAMEWORK="robot_expe"
+
+agent="NeuralQLearner"
+n_replay=1
+netfile="\"convnet_atari3\""
+update_freq=4
+discount=0.99
+seed=1
+minibatch_size=32 #32
+bufferSize=$minibatch_size*2 #512 TODO
+learn_start=$bufferSize+1 #50000
+pool_frms_type="\"max\""
+pool_frms_size=2
+initial_priority="false"
+replay_memory=500000 #500000:~4GB, 1000000:~8GB
+eps_end=0.1
+eps_endt=replay_memory
+lr=0.001 #050 #0.00025
+agent_type="DQN3_0_1"
+preproc_net="\"net_preproc_robot_expe\""
+agent_name=$agent_type"_"$1"_ROBOT_EXPE"
+#original state_dim=7056, here state_dim=
+camera_width=320
+camera_height=240
+images_width=64 #84 #64 #80
+images_height=48 #84 #48 #60
+ncols=1
+hist_len=1
+agent_params="lr="$lr",ep=1,ep_end="$eps_end",ep_endt="$eps_endt",discount="$discount",hist_len="$hist_len",learn_start="$learn_start",replay_memory="$replay_memory",update_freq="$update_freq",n_replay="$n_replay",network="$netfile",preproc="$preproc_net",camera_width="$camera_width",camera_height="$camera_height",images_width="$images_width",images_height="$images_height",minibatch_size="$minibatch_size",rescale_r=1,ncols="$ncols",bufferSize="$bufferSize",valid_size=500,clip_delta=1,min_reward=-1,max_reward=1" #,target_q=10000"
+steps=50000000
+eval_freq=2500 #250000
+eval_steps=1250 #125000
+prog_freq=1000 #5000
+save_freq=1000 #save just after an evaluation, 125000
+gpu=-1 #-1
+pool_frms="type="$pool_frms_type",size="$pool_frms_size
+num_threads=4
+save_versions=0
+
+args="-framework $FRAMEWORK -name $agent_name -env $ENV -env_params $env_params -agent $agent -agent_params $agent_params -steps $steps -eval_freq $eval_freq -eval_steps $eval_steps -prog_freq $prog_freq -save_freq $save_freq -gpu $gpu -pool_frms $pool_frms -seed $seed -threads $num_threads -save_versions $save_versions"
+echo $args
+
+cd dqn
+qlua -i create_transitions.lua $args #luajit
+

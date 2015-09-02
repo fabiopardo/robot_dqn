@@ -1,0 +1,8 @@
+prefix=/home/fabio/catkin_ws/install
+
+Name: sig_ros
+Description: Description of sig_ros
+Version: 0.0.0
+Cflags: -I/home/fabio/catkin_ws/install/include
+Libs: -L/home/fabio/catkin_ws/install/lib 
+Requires: message_runtime

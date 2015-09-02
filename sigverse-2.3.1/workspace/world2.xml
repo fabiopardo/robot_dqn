@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<world name="world">
+  <gravity x="0.0" y="-980.7" z="0.0"/>
+
+  <instanciate class="simple_robot.xml" type="Robot">
+    <set-attr-value name="name" value="robot"/>
+    <set-attr-value name="language" value="c++"/>
+    
+    <set-attr-value name="implementation"
+                    value="./robot_controller.so"/>
+    <set-attr-value name="dynamics" value="true"/>
+    
+    <set-attr-value name="x" value="-200.0"/>
+    <set-attr-value name="y" value="18.0"/>
+    <set-attr-value name="z" value="-200.0"/>
+    <set-attr-value name="collision" value="true"/>
+
+    <camera id="1"
+            link="LINK_CENTER"
+            position="0.0 10.0 10.0"
+            fov="45"  
+            aspectRatio="1.5"/>
+
+  </instanciate>
+
+  <!-- -->
+  <instanciate class="box.xml">
+    <set-attr-value name="name" value="floor"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="y" value="5.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="scalex" value="1000.0"/>
+    <set-attr-value name="scaley" value="10.0"/>
+    <set-attr-value name="scalez" value="1000.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+  <!-- -->
+
+  <!--
+  <instanciate class="box.xml">
+    <set-attr-value name="name" value="wall1"/>
+    <set-attr-value name="x" value="500.0"/>
+    <set-attr-value name="y" value="50.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="scalex" value="2.0"/>
+    <set-attr-value name="scaley" value="100.0"/>
+    <set-attr-value name="scalez" value="1000.0"/>
+    <set-attr-value name="dynamics" value="true"/>
+    <set-attr-value name="collision" value="true"/>
+    <set-attr-value name="mass" value="10.0"/>
+  </instanciate>
+  <instanciate class="box.xml">
+    <set-attr-value name="name" value="wall2"/>
+    <set-attr-value name="x" value="-500.0"/>
+    <set-attr-value name="y" value="50.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="scalex" value="2.0"/>
+    <set-attr-value name="scaley" value="100.0"/>
+    <set-attr-value name="scalez" value="1000.0"/>
+    <set-attr-value name="dynamics" value="true"/>
+    <set-attr-value name="collision" value="true"/>
+    <set-attr-value name="mass" value="10.0"/>
+  </instanciate>
+  <instanciate class="box.xml">
+    <set-attr-value name="name" value="wall3"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="y" value="50.0"/>
+    <set-attr-value name="z" value="500.0"/>
+    <set-attr-value name="scalex" value="1000.0"/>
+    <set-attr-value name="scaley" value="100.0"/>
+    <set-attr-value name="scalez" value="2.0"/>
+    <set-attr-value name="dynamics" value="true"/>
+    <set-attr-value name="collision" value="true"/>
+    <set-attr-value name="mass" value="10.0"/>
+  </instanciate>
+  <instanciate class="box.xml">
+    <set-attr-value name="name" value="wall4"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="y" value="50.0"/>
+    <set-attr-value name="z" value="-500.0"/>
+    <set-attr-value name="scalex" value="1000.0"/>
+    <set-attr-value name="scaley" value="100.0"/>
+    <set-attr-value name="scalez" value="2.0"/>
+    <set-attr-value name="dynamics" value="true"/>
+    <set-attr-value name="collision" value="true"/>
+    <set-attr-value name="mass" value="10.0"/>
+  </instanciate>
+  -->
+
+  <!--
+  <instanciate class="field.xml">
+    <set-attr-value name="name" value="wall1"/>
+    <set-attr-value name="x" value="0.0"/>
+    <set-attr-value name="y" value="0.0"/>
+    <set-attr-value name="z" value="0.0"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+-->
+
+</world>
+

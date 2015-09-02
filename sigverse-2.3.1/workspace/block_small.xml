@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<define-class inherit="Entity.xml" name="block_small">
+  <body filename="dummy-body.xml"/>
+  <x3d>
+    <filename>block_small.x3d</filename>
+  </x3d>
+  <set-attr-value name="y" value="40.0"/>
+</define-class>

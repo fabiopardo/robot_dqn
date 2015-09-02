@@ -1,0 +1,9 @@
+build the controler in catkin_ws
+
+one terminal launch roscore
+one terminal goes to sigverse.../worksape and launch sigserver.sh -w ./world5.xml ; killall sigrunac 
+one terminal goes to robot_DQN/dqn and launch for example
+luajit run_expe.lua -expe_mode no_environment -load_transitions ../data/transitions.t7 -steps 100
+or
+luajit run_expe.lua -expe_mode no_learning -sleep 0.2 -save_transitions ../data/tmp.t7 -save_freq 50
+

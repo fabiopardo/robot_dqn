@@ -1,0 +1,11 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f915f6c16ad, pid=1326, tid=140262377531264
+#
+# JRE version: 6.0_35-b35
+# Java VM: OpenJDK 64-Bit Server VM (23.25-b01 mixed mode linux-amd64 compressed oops)
+# Derivative: IcedTea6 1.13.7
+# Distribution: Ubuntu 14.04 LTS, package 6b35-1.13.7-1ubuntu0.14.04.1
+# Problematic frame:
+# C  [libstdc++.so.6+0x5b6ad]

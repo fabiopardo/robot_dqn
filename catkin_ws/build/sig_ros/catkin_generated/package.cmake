@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "sig_ros")
+set(sig_ros_MAINTAINER "ericgt <ericgt@todo.todo>")
+set(sig_ros_DEPRECATED "")
+set(sig_ros_VERSION "0.0.0")
+set(sig_ros_BUILD_DEPENDS "message_generation" "roscpp" "rospy" "std_msgs")
+set(sig_ros_RUN_DEPENDS "message_runtime" "roscpp" "rospy" "std_msgs")
+set(sig_ros_BUILDTOOL_DEPENDS "catkin")

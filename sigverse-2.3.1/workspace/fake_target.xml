@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf8"?>
+<define-class name="fake_target" inherit="Agent.xml">
+  <x3d>
+    <filename>fake_target.x3d</filename>
+  </x3d>
+  <set-attr-value name="y" value="40.05"/>
+</define-class>

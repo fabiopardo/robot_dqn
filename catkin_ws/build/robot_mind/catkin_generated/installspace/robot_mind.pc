@@ -1,0 +1,8 @@
+prefix=/home/fabio/catkin_ws/install
+
+Name: robot_mind
+Description: Description of robot_mind
+Version: 0.0.0
+Cflags: -I/home/fabio/catkin_ws/install/include
+Libs: -L/home/fabio/catkin_ws/install/lib 
+Requires: 

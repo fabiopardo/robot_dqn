@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<define-class inherit="Entity.xml" name="wall_z">
+  <body filename="dummy-body.xml"/>
+
+  <x3d>
+    <filename>wall_z.x3d</filename>
+  </x3d>
+  <set-attr-value name="y" value="70.0"/>
+</define-class>
